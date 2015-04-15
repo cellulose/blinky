@@ -1,0 +1,6 @@
+# Bakefile - see http://bakeware.io
+
+project_type = nerves
+sdk_config = nerves_rpi_elixir
+device_id = blinky_rpi
+nerves_target = blinky_rpi
