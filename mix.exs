@@ -17,6 +17,7 @@ defmodule Blinky.Mixfile do
   end
 
   defp deps, do: [
+    { :exrm, "~> 0.15.0" },
     {:leds, git: "https://github.com/cellulose/leds.git"}
   ]
 end
