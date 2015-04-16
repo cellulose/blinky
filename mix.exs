@@ -12,12 +12,12 @@ defmodule Blinky.Mixfile do
   #
   # Type `mix help compile.app` for more information
   def application do
-    [applications: [:logger],
-     mod: {Blinky, []}]
+    [applications: [:leds],
+     mod: {Blinky, [:leds]}]
   end
 
   defp deps, do: [
     { :exrm, "~> 0.15.0" },
-    {:leds, git: "https://github.com/cellulose/leds.git"}
+    { :leds, github: "cellulose/leds"}
   ]
 end
