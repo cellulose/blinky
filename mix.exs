@@ -3,7 +3,7 @@ defmodule Blinky.Mixfile do
 
   def project do
     [app: :blinky,
-     version: "0.0.1",
+     version: version,
      elixir: "~> 1.0",
      deps: deps]
   end
@@ -20,4 +20,11 @@ defmodule Blinky.Mixfile do
     { :exrm, "~> 0.15.0" },
     { :leds, github: "cellulose/leds"}
   ]
+
+  defp version do
+    case File.read("VERSION") do
+      {:ok, ver} -> String.strip ver
+      _ -> "0.0.0-dev"
+    end
+  end
 end
